@@ -15,13 +15,14 @@
     "update-versions": "bulk-update-versions --match '^@commercetools-frontend/(?!ui-kit)(.*)'"
   },
   "dependencies": {
-    "@apollo/client": "3.3.7",
+    "@apollo/client": "^3.3.7",
     "@commercetools-frontend/actions-global": "18.1.4",
     "@commercetools-frontend/application-components": "18.1.5",
     "@commercetools-frontend/application-shell": "18.2.0",
     "@commercetools-frontend/assets": "18.1.0",
     "@commercetools-frontend/i18n": "18.1.5",
     "@commercetools-frontend/permissions": "18.1.4",
+    "@commercetools-uikit/card": "^10.44.4",
     "@commercetools-uikit/data-table": "^10.46.1",
     "@commercetools-uikit/data-table-manager": "^10.46.1",
     "@commercetools-uikit/flat-button": "^10.45.0",

@@ -1,0 +1,8 @@
+
+query FetchTaxes($id: String!) {
+  taxCategory(id: $id) {
+    id
+    key
+    name
+  }
+}
