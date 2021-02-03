@@ -21,4 +21,9 @@ export default defineMessages({
     description: 'The label for the link to homepage',
     defaultMessage: 'Homepage',
   },
+  ExternalServerLabelLink: {
+    id: 'MainView.ExternalServerLabelLink',
+    description: 'The label for the link to External Server',
+    defaultMessage: 'External Server',
+  },
 });

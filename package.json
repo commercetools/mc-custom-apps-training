@@ -22,6 +22,7 @@
     "@commercetools-frontend/assets": "18.1.0",
     "@commercetools-frontend/i18n": "18.1.5",
     "@commercetools-frontend/permissions": "18.1.4",
+    "@commercetools-frontend/ui-kit": "^10.46.1",
     "@commercetools-uikit/card": "^10.44.4",
     "@commercetools-uikit/data-table": "^10.46.1",
     "@commercetools-uikit/data-table-manager": "^10.46.1",
