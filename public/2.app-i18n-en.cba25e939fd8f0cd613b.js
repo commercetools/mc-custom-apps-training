@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"./src/i18n/data/en.json":function(e){e.exports=JSON.parse('{"MainView.labelLinkOne":"RestCalls","MainView.labelLinkTwo":"GraphqlCalls","MainView.homepageLabelLink":"Home Page","MainView.title":"Hello, world","RestCalls.title":"RestCalls","GraphqlCalls.title":"GraphqlCalls","Homepage.title":"Homepage text"}')}}]);
+//# sourceMappingURL=2.app-i18n-en.cba25e939fd8f0cd613b.js.map

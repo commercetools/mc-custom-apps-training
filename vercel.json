@@ -1,8 +1,8 @@
 {
   "version": 2,
   "public": true,
-  "name": "training-custom-app-solutions-production-eu.now.sh",
-  "alias": "training-custom-app-solutions-production-eu.now.sh",
+  "name": "training-fady-app.vercel.app",
+  "alias": "training-fady-app.vercel.app",
   "regions": [
     "bru"
   ],
@@ -38,7 +38,7 @@
         "X-Content-Type-Options": "nosniff",
         "X-Frame-Options": "DENY",
         "Referrer-Policy": "same-origin",
-        "Content-Security-Policy": "default-src 'none'; script-src 'self' www.googletagmanager.com/gtm.js www.google-analytics.com/analytics.js 'sha256-iCsbBoM8bmUkPtv6ycSYza0igOOTRcTlRPlJQRsSWb4=' 'sha256-10kKQEp2S6U/f4Jjk+THj3d4b9c1/YDfYO5CUs5deBk=' 'sha256-2HJs5K8Be9qN3aMafASg1uPuhaTi3nk5V//8dJsE0aU=' https://training-custom-app-solutions-production-eu.now.sh/; connect-src 'self' app.launchdarkly.com clientstream.launchdarkly.com events.launchdarkly.com app.getsentry.com *.sentry.io www.google-analytics.com https://mc-api.europe-west1.gcp.commercetools.com https://training-custom-app-solutions-production-eu.now.sh/; img-src * data:; style-src 'self' fonts.googleapis.com data: 'unsafe-inline' https://training-custom-app-solutions-production-eu.now.sh/; font-src 'self' fonts.gstatic.com data:; upgrade-insecure-requests "
+        "Content-Security-Policy": "default-src 'none'; script-src 'self' www.googletagmanager.com/gtm.js www.google-analytics.com/analytics.js 'sha256-iCsbBoM8bmUkPtv6ycSYza0igOOTRcTlRPlJQRsSWb4=' 'sha256-10kKQEp2S6U/f4Jjk+THj3d4b9c1/YDfYO5CUs5deBk=' 'sha256-WeaiIgGx/Zb6Vfp/CnQP+hArdTbaga4WIw2RyH3ceVw=' https://training-fady-app.vercel.app/; connect-src 'self' app.launchdarkly.com clientstream.launchdarkly.com events.launchdarkly.com app.getsentry.com *.sentry.io www.google-analytics.com https://mc-api.europe-west1.gcp.commercetools.com https://training-fady-app.vercel.app/; img-src * data:; style-src 'self' fonts.googleapis.com data: 'unsafe-inline' https://training-fady-app.vercel.app/; font-src 'self' fonts.gstatic.com data:; upgrade-insecure-requests "
       }
     }
   ]

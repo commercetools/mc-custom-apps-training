@@ -4,7 +4,7 @@
   "cloudIdentifier": "gcp-eu",
   "env": {
     "production": {
-      "url": "https://training-custom-app-solutions-production-eu.now.sh"
+      "url": "https://training-fady-app.vercel.app/"
     }
   }
 }

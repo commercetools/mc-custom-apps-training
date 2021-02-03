@@ -4,9 +4,9 @@
   "description": "A starter example for the bare minimum setup to develop a Merchant Center Application",
   "private": true,
   "scripts": {
-    "build": "mc-scripts build",
+    "build": "mc-scripts build && npm run compile-html",
     "start": "dotenv -- mc-scripts start",
-    "compile-html": "NODE_ENV=production dotenv -- mc-scripts compile-html",
+    "compile-html": "NODE_ENV=production dotenv -- mc-scripts compile-html --transformer $(pwd)/config/transformer-vercel.js",
     "compile-html:local": "NODE_ENV=production MC_APP_ENV=development dotenv -- mc-scripts compile-html --transformer @commercetools-frontend/mc-dev-authentication/transformer-local.js",
     "start:prod:local": "yarn compile-html:local && mc-scripts serve",
     "extract-intl": "formatjs extract --format=$(pwd)/intl-formatter.js --out-file=$(pwd)/src/i18n/data/core.json 'src/**/!(*.spec).js'",
