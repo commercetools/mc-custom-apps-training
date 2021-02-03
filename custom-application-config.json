@@ -4,7 +4,7 @@
   "cloudIdentifier": "gcp-eu",
   "env": {
     "production": {
-      "url": "https://<your_app_hostname>"
+      "url": "https://training-custom-app-solutions-production-eu.now.sh"
     }
   }
 }

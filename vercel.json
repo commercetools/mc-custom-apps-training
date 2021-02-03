@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "training-custom-app-solutions-production-eu.now.sh",
+  "alias": "training-custom-app-solutions-production-eu.now.sh",
+  "regions": [
+    "bru"
+  ],
+  "builds": [
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "config/fallback-route.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*).(js.map|js|css|txt|html|png)",
+      "dest": "/public/$1.$2",
+      "headers": {
+        "Cache-Control": "s-maxage=31536000,immutable"
+      }
+    },
+    {
+      "src": "/(login|logout)",
+      "dest": "/config/fallback-route.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html",
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "same-origin",
+        "Content-Security-Policy": "default-src 'none'; script-src 'self' www.googletagmanager.com/gtm.js www.google-analytics.com/analytics.js 'sha256-iCsbBoM8bmUkPtv6ycSYza0igOOTRcTlRPlJQRsSWb4=' 'sha256-10kKQEp2S6U/f4Jjk+THj3d4b9c1/YDfYO5CUs5deBk=' 'sha256-2HJs5K8Be9qN3aMafASg1uPuhaTi3nk5V//8dJsE0aU=' https://training-custom-app-solutions-production-eu.now.sh/; connect-src 'self' app.launchdarkly.com clientstream.launchdarkly.com events.launchdarkly.com app.getsentry.com *.sentry.io www.google-analytics.com https://mc-api.europe-west1.gcp.commercetools.com https://training-custom-app-solutions-production-eu.now.sh/; img-src * data:; style-src 'self' fonts.googleapis.com data: 'unsafe-inline' https://training-custom-app-solutions-production-eu.now.sh/; font-src 'self' fonts.gstatic.com data:; upgrade-insecure-requests "
+      }
+    }
+  ]
+}
