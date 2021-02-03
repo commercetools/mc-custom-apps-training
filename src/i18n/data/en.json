@@ -4,6 +4,5 @@
   "MainView.homepageLabelLink":"Home Page",
   "MainView.title": "Hello, world",
   "RestCalls.title": "RestCalls",
-  "GraphqlCalls.title": "GraphqlCalls",
-  "Homepage.title":"Homepage text"
+  "GraphqlCalls.title": "GraphqlCalls"
 }

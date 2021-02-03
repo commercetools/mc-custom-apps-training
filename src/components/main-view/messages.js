@@ -16,11 +16,6 @@ export default defineMessages({
     description: 'The label for the link to GraphqlCalls',
     defaultMessage: 'GraphqlCalls',
   },
-  homepageLabelLink: {
-    id: 'MainView.homepageLabelLink',
-    description: 'The label for the link to homepage',
-    defaultMessage: 'Homepage',
-  },
   ExternalServerLabelLink: {
     id: 'MainView.ExternalServerLabelLink',
     description: 'The label for the link to External Server',

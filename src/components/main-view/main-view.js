@@ -8,7 +8,6 @@ import Spacings from '@commercetools-uikit/spacings';
 import FlatButton from '@commercetools-uikit/flat-button';
 import RestCalls from '../RestCalls';
 import GraphqlCalls from '../GraphqlCalls';
-import Homepage from '../homepage';
 import ExternalServer from '../ExternalServer';
 import messages from './messages';
 import styles from './main-view.mod.css';
@@ -22,12 +21,6 @@ const MainView = (props) => {
         <Text.Headline as="h1" intlMessage={messages.title} />
         <div className={styles['nav-header']}>
           <Spacings.Inline scale="s">
-          <FlatButton
-              as={Link}
-              to={`${props.match.url}/homepage`}
-              icon={<TableIcon />}
-              label={intl.formatMessage(messages.homepageLabelLink)}
-            />
             <FlatButton
               as={Link}
               to={`${props.match.url}/RestCalls`}
@@ -51,7 +44,6 @@ const MainView = (props) => {
         <Switch>
           <Route path={`${props.match.path}/RestCalls`} component={RestCalls} />
           <Route path={`${props.match.path}/GraphqlCalls`} component={GraphqlCalls} />
-          <Route path={`${props.match.path}/homepage`} component={Homepage} />
           <Route path={`${props.match.path}/ExternalServer`} component={ExternalServer} />
         </Switch>
       </Spacings.Stack>

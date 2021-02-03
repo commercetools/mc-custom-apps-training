@@ -32,32 +32,13 @@ const initialState = {
   ];
 
 const RestCalls = () =>{
-// The asyncDispatch is a wrapper around the redux dispatch and provides
+ // The asyncDispatch is a wrapper around the redux dispatch and provides
   // the correct return type definitions because the action resolves to a Promise.
   const asyncDispatch = useAsyncDispatch();
-  const showApiErrorNotification = useShowApiErrorNotification()
+  const showApiErrorNotification = useShowApiErrorNotification();
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  useEffect(() => {
-        asyncDispatch(
-        actions.fetchZones()
-        )
-        .then(result => {
-            dispatch({ type: 'ok', payload: result });
-        })
-        .catch(error => {
-            dispatch({ type: 'error', payload: error });
-            showApiErrorNotification({ errors: error });
-        })
-    }, []);
-  if (state.isLoading) return 'Loading...';
-  if (state.error) return `Error! ${state.error.message}`;
-  console.log(state.data);
-  return (
-    <DataTableManager columns={columns}>
-      <DataTable rows={state.data.results} />
-    </DataTableManager>
-  );
+ 
+  return <div>RestCalls</div>
 
 }
 RestCalls.displayName = 'RestCalls';

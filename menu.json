@@ -4,28 +4,7 @@
   "icon": "RocketIcon",
   "permissions": ["ViewProducts"],
   "featureToggle": null,
-  "submenu": [{
-    "key": "homepage",
-    "uriPath": "examples-starter/homepage",
-    "icon": "RocketIcon",
-    "permissions": ["ViewProducts"],
-    "featureToggle": null,
-    "submenu": [],
-    "labelAllLocales": [
-      {
-        "locale": "en",
-        "value": "Homepage"
-      },
-      {
-        "locale": "de",
-        "value": "Homepage"
-      }, 
-      {
-        "locale": "es",
-        "value": "Homepage"
-      }
-    ]
-  }],
+  "submenu": [],
   "labelAllLocales": [
     {
       "locale": "en",
