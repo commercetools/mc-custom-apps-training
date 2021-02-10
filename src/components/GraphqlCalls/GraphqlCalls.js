@@ -2,7 +2,6 @@ import React from 'react';
 import Text from '@commercetools-uikit/text';
 import messages from './messages';
 import { GRAPHQL_TARGETS } from '@commercetools-frontend/constants';
-import { FetchTaxes } from './queries.graphql';
 import { useQuery } from '@apollo/client/react';
 import Card from '@commercetools-uikit/card';
 
