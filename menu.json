@@ -5,8 +5,8 @@
   "permissions": ["ViewProducts"],
   "featureToggle": null,
   "submenu": [{
-    "key": "homepage",
-    "uriPath": "examples-starter/homepage",
+    "key": "ShoppingLists",
+    "uriPath": "examples-starter/ShoppingLists",
     "icon": "RocketIcon",
     "permissions": ["ViewProducts"],
     "featureToggle": null,
@@ -14,15 +14,15 @@
     "labelAllLocales": [
       {
         "locale": "en",
-        "value": "Homepage"
+        "value": "ShoppingLists"
       },
       {
         "locale": "de",
-        "value": "Homepage"
+        "value": "ShoppingLists"
       }, 
       {
         "locale": "es",
-        "value": "Homepage"
+        "value": "ShoppingLists"
       }
     ]
   }],

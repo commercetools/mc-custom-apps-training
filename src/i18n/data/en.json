@@ -1,9 +1,8 @@
 {
   "MainView.labelLinkOne": "RestCalls",
-  "MainView.labelLinkTwo": "GraphqlCalls",
+  "MainView.labelLinkTwo": "ShoppingLists",
   "MainView.homepageLabelLink":"Home Page",
   "MainView.title": "Hello, world",
-  "RestCalls.title": "RestCalls",
-  "GraphqlCalls.title": "GraphqlCalls",
-  "Homepage.title":"Homepage text"
+  "ShoppingLists.title": "ShoppingLists"
 }
+  
