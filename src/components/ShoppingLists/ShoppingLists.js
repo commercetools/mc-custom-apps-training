@@ -18,18 +18,29 @@ import { DOMAINS } from "@commercetools-frontend/constants";
 import { useFormik } from "formik";
 
 import { useQuery, useMutation } from "@apollo/client/react";
+
 import IconButton from "@commercetools-uikit/icon-button";
 import { CheckInactiveIcon, EditIcon } from "@commercetools-uikit/icons";
 
 const target = GRAPHQL_TARGETS.COMMERCETOOLS_PLATFORM;
 
 const ShoppingLists = () => {
-  const [shoppingLists, setShoppingLists] = useState([{}]);
   const [formVisibility, setFormVisibility] = useState(false);
   const showApiErrorNotification = useShowApiErrorNotification();
   const showSuccessNotification = useShowNotification();
-  const [saveShoppingList] = useMutation(createShoppingList);
-  const [delShoppingList] = useMutation(deleteShoppingList);
+  const { error, data, loading } = useQuery(fetchShoppingLists, {
+    context: { target },
+  });
+  const refetch = {
+    // Then re-run 
+    refetchQueries: [
+      { query: fetchShoppingLists ,
+        context:{target}
+      }
+    ]
+  }
+  const [saveShoppingList] = useMutation(createShoppingList,refetch);
+  const [delShoppingList] = useMutation(deleteShoppingList,refetch);
   const cols = [
     {
       key: "id",
@@ -58,21 +69,14 @@ const ShoppingLists = () => {
             icon={<CheckInactiveIcon />}
             label="Delete Record"
             onClick={async (row) => {
-              const { error, data } = await delShoppingList({
+              const { error } = await delShoppingList({
                 variables: {
                   version,
                   id,
                 },
                 context: { target },
               });
-              if (error) showApiErrorNotification({ error: error });
-              console.log(data);
-              setShoppingLists(
-                shoppingLists.filter((item) => {
-                  console.log(data);
-                  return item.id !== data.deleteShoppingList.id;
-                })
-              );
+              if (error) showApiErrorNotification({ error: error });             
               showSuccessNotification({
                 kind: "success",
                 domain: DOMAINS.SIDE,
@@ -97,12 +101,10 @@ const ShoppingLists = () => {
     validateOnBlur: false,
   });
 
-  const { error, data, loading } = useQuery(fetchShoppingLists, {
-    context: { target },
-  });
+  
 
   const handleSubmit = async (formValues) => {
-    const { error, data, loading } = await saveShoppingList({
+    const { error } = await saveShoppingList({
       variables: {
         locale: formValues.locale,
         value: formValues.name,
@@ -110,7 +112,6 @@ const ShoppingLists = () => {
       context: { target },
     });
     if (error) showApiErrorNotification({ error: error });
-    setShoppingLists([...shoppingLists, data.createShoppingList]);
     setFormVisibility(false);
     showSuccessNotification({
       kind: "success",
@@ -119,9 +120,6 @@ const ShoppingLists = () => {
     });
   };
 
-  useEffect(() => {
-    setShoppingLists(data?.shoppingLists?.results);
-  }, [data]);
 
   if (loading) return "Loading...";
   if (error) return `---Error! ${error.message}`;
@@ -164,7 +162,7 @@ const ShoppingLists = () => {
         />
       </Spacings.Inline>
       <DataTableManager columns={cols}>
-        <DataTable rows={shoppingLists?.length > 0 ? shoppingLists : []} />
+        <DataTable rows={data?.shoppingLists?.results} />
       </DataTableManager>
     </React.Fragment>
   );
