@@ -18,6 +18,7 @@ import { DOMAINS } from "@commercetools-frontend/constants";
 import { useFormik } from "formik";
 
 import { useQuery, useMutation } from "@apollo/client/react";
+
 import IconButton from "@commercetools-uikit/icon-button";
 import { CheckInactiveIcon, EditIcon } from "@commercetools-uikit/icons";
 
