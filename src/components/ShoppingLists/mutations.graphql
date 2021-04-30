@@ -1,6 +1,5 @@
-
 mutation createShoppingList($locale: Locale!, $value: String!) {
-  createShoppingList(draft: {name: {locale: $locale, value: $value}}) {
+  createShoppingList(draft: { name: { locale: $locale, value: $value } }) {
     id
     version
     nameAllLocales {
@@ -9,9 +8,23 @@ mutation createShoppingList($locale: Locale!, $value: String!) {
   }
 }
 
-
 mutation deleteShoppingList($version: Long!, $id: String) {
   deleteShoppingList(version: $version, id: $id) {
+    id
+  }
+}
+
+mutation updateShoppingListName(
+  $version: Long!
+  $id: String
+  $locale: Locale!
+  $value: String!
+) {
+  updateShoppingList(
+    actions: { changeName: { name: { locale: $locale, value: $value } } }
+    version: $version
+    id: $id
+  ) {
     id
   }
 }

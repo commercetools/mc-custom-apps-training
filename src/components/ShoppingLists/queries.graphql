@@ -4,6 +4,7 @@ query fetchShoppingLists {
       id
       version
       nameAllLocales {
+        locale
         value
       }
     }
