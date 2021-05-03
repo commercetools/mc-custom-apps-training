@@ -1,6 +1,6 @@
 {
   "name": "Custom Application Template Starter",
-  "entryPointUriPath": "examples-starter",
+  "entryPointUriPath": "training-custom-app",
   "cloudIdentifier": "gcp-eu",
   "env": {
     "production": {

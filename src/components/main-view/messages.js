@@ -10,7 +10,7 @@ export default defineMessages({
   ShoppingListsLabelLink: {
     id: 'MainView.ShoppingLists',
     description: 'The label for the link to ShoppingLists',
-    defaultMessage: 'ShoppingLists',
+    defaultMessage: 'Shopping Lists',
   },
  
   ExternalServerLabelLink: {

@@ -3,7 +3,7 @@ import { renderApplication } from '../../test-utils';
 
 describe('main view', () => {
   it('the user can click on the link to "one" and the page should show a text with "View one"', async () => {
-    const initialRoute = '/my-project/examples-starter';
+    const initialRoute = '/my-project/training-custom-app';
     const rendered = renderApplication(null, {
       permissions: { canViewProducts: true, canManageProducts: true },
       route: initialRoute,

@@ -23,21 +23,21 @@ const MainView = (props) => {
            
             <FlatButton
               as={Link}
-              to={`${props.match.url}/ShoppingLists`}
+              to={`${props.match.url}/shopping-lists`}
               icon={<TableIcon />}
               label={intl.formatMessage(messages.ShoppingListsLabelLink)}
             />
              <FlatButton
               as={Link}
-              to={`${props.match.url}/ExternalServer`}
+              to={`${props.match.url}/external-server`}
               icon={<RocketIcon />}
               label={intl.formatMessage(messages.ExternalServerLabelLink)}
             />
           </Spacings.Inline>
         </div>
         <Switch>
-          <Route path={`${props.match.path}/ShoppingLists`} component={ShoppingLists} />
-          <Route path={`${props.match.path}/ExternalServer`} component={ExternalServer} />
+          <Route path={`${props.match.path}/shopping-lists`} component={ShoppingLists} />
+          <Route path={`${props.match.path}/external-server`} component={ExternalServer} />
         </Switch>
       </Spacings.Stack>
     </Spacings.Inset>
