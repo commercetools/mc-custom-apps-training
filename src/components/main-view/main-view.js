@@ -6,9 +6,7 @@ import { ListIcon, TableIcon,RocketIcon } from '@commercetools-uikit/icons';
 import Text from '@commercetools-uikit/text';
 import Spacings from '@commercetools-uikit/spacings';
 import FlatButton from '@commercetools-uikit/flat-button';
-import RestCalls from '../RestCalls';
-import GraphqlCalls from '../GraphqlCalls';
-import Homepage from '../homepage';
+import ShoppingLists from '../ShoppingLists';
 import ExternalServer from '../ExternalServer';
 import messages from './messages';
 import styles from './main-view.mod.css';
@@ -22,37 +20,24 @@ const MainView = (props) => {
         <Text.Headline as="h1" intlMessage={messages.title} />
         <div className={styles['nav-header']}>
           <Spacings.Inline scale="s">
-          <FlatButton
-              as={Link}
-              to={`${props.match.url}/homepage`}
-              icon={<TableIcon />}
-              label={intl.formatMessage(messages.homepageLabelLink)}
-            />
+           
             <FlatButton
               as={Link}
-              to={`${props.match.url}/RestCalls`}
-              icon={<ListIcon />}
-              label={intl.formatMessage(messages.RestCallsLabelLink)}
-            />
-            <FlatButton
-              as={Link}
-              to={`${props.match.url}/GraphqlCalls`}
+              to={`${props.match.url}/shopping-lists`}
               icon={<TableIcon />}
-              label={intl.formatMessage(messages.GraphqlCallsLabelLink)}
+              label={intl.formatMessage(messages.ShoppingListsLabelLink)}
             />
              <FlatButton
               as={Link}
-              to={`${props.match.url}/ExternalServer`}
+              to={`${props.match.url}/external-server`}
               icon={<RocketIcon />}
               label={intl.formatMessage(messages.ExternalServerLabelLink)}
             />
           </Spacings.Inline>
         </div>
         <Switch>
-          <Route path={`${props.match.path}/RestCalls`} component={RestCalls} />
-          <Route path={`${props.match.path}/GraphqlCalls`} component={GraphqlCalls} />
-          <Route path={`${props.match.path}/homepage`} component={Homepage} />
-          <Route path={`${props.match.path}/ExternalServer`} component={ExternalServer} />
+          <Route path={`${props.match.path}/shopping-lists`} component={ShoppingLists} />
+          <Route path={`${props.match.path}/external-server`} component={ExternalServer} />
         </Switch>
       </Spacings.Stack>
     </Spacings.Inset>

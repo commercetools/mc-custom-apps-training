@@ -2,8 +2,7 @@
   "MainView.labelLinkOne": "RestCalls",
   "MainView.labelLinkTwo": "GraphqlCalls",
   "MainView.homepageLabelLink":"Home Page",
-  "MainView.title": "Hello, world",
-  "RestCalls.title": "RestCalls",
-  "GraphqlCalls.title": "GraphqlCalls",
-  "Homepage.title":"Homepage text"
+  "MainView.title": "Welcome to commercetools Custom Apps Training",
+  "ShoppingLists.title": "GraphqlCalls"
+  
 }

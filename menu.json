@@ -1,12 +1,12 @@
 {
-  "key": "examples-starter",
-  "uriPath": "examples-starter",
+  "key": "training-custom-app",
+  "uriPath": "training-custom-app",
   "icon": "RocketIcon",
   "permissions": ["ViewProducts"],
   "featureToggle": null,
   "submenu": [{
     "key": "homepage",
-    "uriPath": "examples-starter/homepage",
+    "uriPath": "training-custom-app/shopping-lists",
     "icon": "RocketIcon",
     "permissions": ["ViewProducts"],
     "featureToggle": null,
@@ -14,15 +14,15 @@
     "labelAllLocales": [
       {
         "locale": "en",
-        "value": "Homepage"
+        "value": "Shopping Lists"
       },
       {
         "locale": "de",
-        "value": "Homepage"
+        "value": "Shopping Lists"
       }, 
       {
         "locale": "es",
-        "value": "Homepage"
+        "value": "Shopping Lists"
       }
     ]
   }],

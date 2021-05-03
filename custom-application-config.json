@@ -1,17 +1,10 @@
 {
   "name": "Custom Application Template Starter",
-  "entryPointUriPath": "examples-starter",
+  "entryPointUriPath": "training-custom-app",
   "cloudIdentifier": "gcp-eu",
   "env": {
     "production": {
       "url": "https://training-fady-app.vercel.app/"
-    }
-  },
-  "headers": {
-    "csp": {
-      "connect-src": [
-        "https://external-server.vercel.app"
-      ]
     }
   }
 }

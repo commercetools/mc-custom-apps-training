@@ -1,0 +1,30 @@
+mutation createShoppingList($locale: Locale!, $value: String!) {
+  createShoppingList(draft: { name: { locale: $locale, value: $value } }) {
+    id
+    version
+    nameAllLocales {
+      value
+    }
+  }
+}
+
+mutation deleteShoppingList($version: Long!, $id: String) {
+  deleteShoppingList(version: $version, id: $id) {
+    id
+  }
+}
+
+mutation updateShoppingListName(
+  $version: Long!
+  $id: String
+  $locale: Locale!
+  $value: String!
+) {
+  updateShoppingList(
+    actions: { changeName: { name: { locale: $locale, value: $value } } }
+    version: $version
+    id: $id
+  ) {
+    id
+  }
+}
