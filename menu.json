@@ -1,6 +1,6 @@
 {
-  "key": "examples-starter",
-  "uriPath": "examples-starter",
+  "key": "training-custom-app",
+  "uriPath": "training-custom-app",
   "icon": "RocketIcon",
   "permissions": ["ViewProducts"],
   "featureToggle": null,

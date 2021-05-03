@@ -2,7 +2,8 @@
   "MainView.labelLinkOne": "",
   "MainView.labelLinkTwo": "",
   "MainView.homepageLabelLink":"Startesite",
-  "MainView.title": "",
+  "MainView.title": "Herzlich willkommen zum commercetools Custom Apps Training",
   "ViewOne.title": "",
-  "ViewTwo.title": ""
+  "ViewTwo.title": "",
+  "Homepage.title":"Startesite text"
 }

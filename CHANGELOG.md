@@ -137,12 +137,12 @@
   -        <Redirect
   -          exact={true}
   -          from="/:projectKey"
-  -          to="/:projectKey/examples-starter"
+  -          to="/:projectKey/training-custom-app"
   -        />
   -      )
   -    }
   -    <Route
-  -      path="/:projectKey/examples-starter"
+  -      path="/:projectKey/training-custom-app"
   -      component={AsyncApplicationRoutes}
   -    />
   -    {/* Catch-all route */}
@@ -179,9 +179,9 @@
   ```diff
   -renderApp(<ApplicationStarter />, {
   +renderApp(<ApplicationRoutes />, {
-    route: '/my-project/examples-starter'
+    route: '/my-project/training-custom-app'
   +  environment: {
-  +    entryPointUriPath: 'examples-starter',
+  +    entryPointUriPath: 'training-custom-app',
   +  },
   +  disableAutomaticEntryPointRoutes: false,
   });
