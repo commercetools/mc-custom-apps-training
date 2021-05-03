@@ -6,12 +6,5 @@
     "production": {
       "url": "https://training-fady-app.vercel.app/"
     }
-  },
-  "headers": {
-    "csp": {
-      "connect-src": [
-        "https://external-server.vercel.app"
-      ]
-    }
   }
 }
