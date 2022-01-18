@@ -6,7 +6,7 @@ import PrimaryButton from "@commercetools-uikit/primary-button";
 import { ContentNotification, Spacings } from "@commercetools-frontend/ui-kit";
 
 const externalApiUrl =
-  "https://state-machines-gcp-eu-commercetools-playground.vercel.app/api/echo";
+  "https://app-kit-playground-commercetools-playground.vercel.app/api/echo";
 
 const ExternalServer = () => {
   // The asyncDispatch is a wrapper around the redux dispatch and provides
