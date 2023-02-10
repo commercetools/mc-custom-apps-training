@@ -19,6 +19,6 @@
   "mainMenuLink":{
     "defaultLabel":"FF Manage ShoppingLists",
     "labelAllLocales":[],
-    "permissions":["ManageFffTrainingCustomApp","manage_shopping_lists"]
+    "permissions":["ManageFffTrainingCustomApp"]
   }
 }
