@@ -137,12 +137,12 @@
   -        <Redirect
   -          exact={true}
   -          from="/:projectKey"
-  -          to="/:projectKey/training-custom-app"
+  -          to="/:projectKey/fff-training-custom-app"
   -        />
   -      )
   -    }
   -    <Route
-  -      path="/:projectKey/training-custom-app"
+  -      path="/:projectKey/fff-training-custom-app"
   -      component={AsyncApplicationRoutes}
   -    />
   -    {/* Catch-all route */}
@@ -179,9 +179,9 @@
   ```diff
   -renderApp(<ApplicationStarter />, {
   +renderApp(<ApplicationRoutes />, {
-    route: '/my-project/training-custom-app'
+    route: '/my-project/fff-training-custom-app'
   +  environment: {
-  +    entryPointUriPath: 'training-custom-app',
+  +    entryPointUriPath: 'fff-training-custom-app',
   +  },
   +  disableAutomaticEntryPointRoutes: false,
   });

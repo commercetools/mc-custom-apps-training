@@ -12,7 +12,7 @@ const render = (options) => {
 describe('when route matches', () => {
   it('should render view', async () => {
     const rendered = render({
-      route: '/my-project/training-custom-app',
+      route: '/my-project/fff-training-custom-app',
     });
     await rendered.findByText(/Page one/i);
   });
@@ -30,7 +30,7 @@ describe('when route does not match', () => {
 describe('without permissions', () => {
   it('should render `PageUnauthorized`', async () => {
     const rendered = render({
-      route: '/my-project/training-custom-app',
+      route: '/my-project/fff-training-custom-app',
       permissions: {},
     });
     await rendered.findByText(

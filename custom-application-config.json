@@ -1,10 +1,24 @@
 {
   "name": "Custom Application Template Starter",
-  "entryPointUriPath": "training-custom-app",
+  "entryPointUriPath": "fff-training-custom-app",
   "cloudIdentifier": "gcp-eu",
   "env": {
+    "development":{
+      "initialProjectKey":"happy-garden-center-0123-dev1"
+    },  
     "production": {
-      "url": "https://<your_app_hostname>"
+      "applicationId":"cldycod3r004cw401xu8h82ld",
+      "url": "https://fff-ca-shop.vercel.app"
     }
+  },
+  "icon": "${path:@commercetools-frontend/assets/application-icons/rocket.svg}",
+  "oAuthScopes": {
+    "view": ["view_shopping_lists"],
+    "manage": ["manage_shopping_lists"]
+  },
+  "mainMenuLink":{
+    "defaultLabel":"FF Manage ShoppingLists",
+    "labelAllLocales":[],
+    "permissions":["ManageFffTrainingCustomApp","manage_shopping_lists"]
   }
 }

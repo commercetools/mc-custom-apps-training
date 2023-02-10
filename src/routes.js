@@ -1,36 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
-import { useIsAuthorized } from '@commercetools-frontend/permissions';
-import LockedDiamondSVG from '@commercetools-frontend/assets/images/locked-diamond.svg';
-import { MaintenancePageLayout } from '@commercetools-frontend/application-components';
-import MainView from './components/main-view';
-import { PERMISSIONS } from './constants';
 
-const PageUnauthorized = () => (
-  <MaintenancePageLayout
-    imageSrc={LockedDiamondSVG}
-    title="Not enough permissions to access this resource"
-    paragraph1="We recommend to contact your project administrators for further questions."
-  />
-);
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import Spacings from '@commercetools-uikit/spacings';
+import MainView from './components/main-view';
 
 const ApplicationRoutes = () => {
   const match = useRouteMatch();
-  const canViewProducts = useIsAuthorized({
-    demandedPermissions: [PERMISSIONS.ViewProducts],
-  });
-  if (!canViewProducts) {
-    return <PageUnauthorized />;
-  }
+
+  /**
+   * When using routes, there is a good chance that you might want to
+   * restrict the access to a certain route based on the user permissions.
+   * You can evaluate user permissions using the `useIsAuthorized` hook.
+   * For more information see https://docs.commercetools.com/custom-applications/development/permissions
+   *
+   * NOTE that by default the Custom Application implicitly checks for a "View" permission,
+   * otherwise it won't render. Therefore, checking for "View" permissions here
+   * is redundant and not strictly necessary.
+   */
+
   return (
-    <Switch>
+    <Spacings.Inset scale="l">
+      <Switch>
       <Route
         path={`${match.path}/some-other-route`}
         render={() => <div>{'Nothing to see'}</div>}
       />
       <Route render={(routerProps) => <MainView match={routerProps.match} />} />
     </Switch>
+    </Spacings.Inset>
   );
 };
 ApplicationRoutes.displayName = 'ApplicationRoutes';

@@ -1,6 +1,6 @@
 {
-  "key": "training-custom-app",
-  "uriPath": "training-custom-app",
+  "key": "fff-training-custom-app",
+  "uriPath": "fff-training-custom-app",
   "icon": "RocketIcon",
   "permissions": ["ViewProducts"],
   "featureToggle": null,

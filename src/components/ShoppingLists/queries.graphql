@@ -1,0 +1,12 @@
+query fetchShoppingLists {
+  shoppingLists(limit:100) {
+    results {
+      id
+      version
+      nameAllLocales {
+        value
+        locale
+      }
+    }
+  }
+}
